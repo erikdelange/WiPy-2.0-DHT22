@@ -1,0 +1,45 @@
+Running dht22.py
+measurement  0:  17 us - 0
+measurement  1:  14 us - 0
+measurement  2:  37 us - 0
+measurement  3:  19 us - 0
+measurement  4:  29 us - 0
+measurement  5:  23 us - 0
+measurement  6:  28 us - 0
+measurement  7:  82 us - 1
+measurement  8:  82 us - 1
+measurement  9:  18 us - 0
+measurement 10:  74 us - 1
+measurement 11:  82 us - 1
+measurement 12:  65 us - 1
+measurement 13:  71 us - 1
+measurement 14:  75 us - 1
+measurement 15:  82 us - 1
+measurement 16:  27 us - 0
+measurement 17:  25 us - 0
+measurement 18:  37 us - 0
+measurement 19:  18 us - 0
+measurement 20:  32 us - 0
+measurement 21:  19 us - 0
+measurement 22:  25 us - 0
+measurement 23:  27 us - 0
+measurement 24:  68 us - 1
+measurement 25:  75 us - 1
+measurement 26:  75 us - 1
+measurement 27:  27 us - 0
+measurement 28:  29 us - 0
+measurement 29:  36 us - 0
+measurement 30:  15 us - 0
+measurement 31:  29 us - 0
+measurement 32:  79 us - 1
+measurement 33:  19 us - 0
+measurement 34:  71 us - 1
+measurement 35:  37 us - 0
+measurement 36:  15 us - 0
+measurement 37:  32 us - 0
+measurement 38:  22 us - 0
+measurement 39:  25 us - 0
+raw data: 1 191 0 224 160
+checksum: 160
+RH = 44.7%  T = 22.4C
+>
