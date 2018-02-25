@@ -29,6 +29,8 @@ time.sleep_ms(1)
 
 pulses = pycom.pulses_get(pin, 100)
 
+pin.init(Pin.OPEN_DRAIN)
+
 # Display the raw measurements
 if 1:
     print(len(pulses), "pulses measured")

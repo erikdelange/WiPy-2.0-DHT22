@@ -1,3 +1,4 @@
+
 # dht22.py
 #
 # Class file for accessing the DHT22 temperature and humidity sensor using a WiPy 2.0.
@@ -18,16 +19,18 @@ class device:
         self.pin = Pin(pin, mode=Pin.OPEN_DRAIN)
 
     def trigger(self):
-        self.pin(1)  # enforce two second read interval
-        time.sleep(2)
+        self.pin(1)
+        time.sleep(2)  # enforce two second read interval
 
         self.pin(0)  # send start signal (1ms low).
         time.sleep_ms(1)
 
         pulses = pycom.pulses_get(self.pin, 100)  # capture communication
 
+        self.pin.init(Pin.OPEN_DRAIN)
+
         if len(pulses) != 82:  # 40 data bit plus one acknowledge expected
-            self.status = "ReadError"
+            self.status = "ReadError - received {} only pulses".format(len(pulses))
             return False
 
         bits = []
@@ -72,7 +75,8 @@ class device:
 if __name__ == "__main__":
     dht = device(Pin.exp_board.G22)
 
-    if dht.trigger() == True:
-        print("RH = {}%  T = {}C".format(dht.humidity, dht.temperature))
-    else:
-        print(dht.status())
+    for _ in range(5):
+        if dht.trigger() == True:
+            print("RH = {}%  T = {}C".format(dht.humidity, dht.temperature))
+        else:
+            print(dht.status)
