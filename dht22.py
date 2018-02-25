@@ -62,15 +62,6 @@ class device:
         self.status = "OK"
         return True
 
-    def temperature(self):
-        return self.temperature
-
-    def humidity(self):
-        return self.humidity
-
-    def status(self):
-        return self.status
-
 
 if __name__ == "__main__":
     dht = device(Pin.exp_board.G22)
