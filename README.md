@@ -12,26 +12,31 @@ Since the introduction of the *pycom.pulses_get()* function reading a DHT22 is e
 
 File *using_the_dht22.py* provides an extensively commented example on reading the DHT22. It also prints all intermediate results so it is easy to follow what is going on. It can be run stand-alone.
 
-For a more comfortable use of the DHT22 file *dht22.py* contains a class *device* to access a sensor. After triggering a measurement the temperature and humidity can be read. Any error can be detected by checking the result of *trigger()* (which is False in case of errors) and the *status()*. For testing purposes dht22.py can be run stand-alone, else use it as shown below.
+For a more comfortable use of the DHT22 file *dht22.py* contains a class *device* to access a sensor. After triggering a measurement the temperature and humidity can be read. Any error can be detected by checking the result of *trigger()* (which is False in case of errors) and the value of *status*. For testing purposes dht22.py can be run stand-alone, else use it as shown below.
 ```python
 from machine import Pin
 
 import dht22
 
-dht = dht22.device(Pin.exp_board.G22)
+dht = device(Pin.exp_board.G22)
 
-if dht.trigger() == True:
-    print("RH = {}%  T = {}C".format(dht.humidity, dht.temperature))
-else:
-    print(dht.status())
+for _ in range(5):
+    if dht.trigger() == True:
+        print("RH = {}%  T = {}C".format(dht.humidity, dht.temperature))
+    else:
+        print(dht.status)
 ```
 Below the output you can expect.
 
 > MicroPython v1.8.6-849-86da809 on 2018-01-17; WiPy with ESP32
 > Type "help()" for more information.
 >
-> Running D:\Projects\WiPy\DHT22\dht22.py
+> Running D:\Projects\WiPy\DHT22\measure.py
 >
+> RH = 51.0%  T = 21.7C
+> RH = 51.0%  T = 21.7C
+> RH = 51.0%  T = 21.7C
+> RH = 51.0%  T = 21.7C
 > RH = 51.0%  T = 21.7C
 
 ### Tools and versions
