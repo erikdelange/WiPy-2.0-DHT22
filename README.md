@@ -28,15 +28,15 @@ for _ in range(5):
 ```
 Below the output you can expect.
 
-> MicroPython v1.8.6-849-86da809 on 2018-01-17; WiPy with ESP32
+> MicroPython v1.8.6-849-86da809 on 2018-01-17; WiPy with ESP32<br>
 > Type "help()" for more information.
->
+
 > Running D:\Projects\WiPy\DHT22\measure.py
 >
-> RH = 51.0%  T = 21.7C
-> RH = 51.0%  T = 21.7C
-> RH = 51.0%  T = 21.7C
-> RH = 51.0%  T = 21.7C
+> RH = 51.0%  T = 21.7C<br>
+> RH = 51.0%  T = 21.7C<br>
+> RH = 51.0%  T = 21.7C<br>
+> RH = 51.0%  T = 21.7C<br>
 > RH = 51.0%  T = 21.7C
 
 ### Tools and versions
