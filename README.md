@@ -2,7 +2,7 @@
 Measure temperature and humidity using the DHT22 and a WiPy 2.0
 
 ### Summary
-The DHT22 sensor uses a type of onewire protocol to communicate with the outside world. This code example shows how to read values from this sensor using the WiPy 2.0. The DHT22 can be powered with 3V3 - the same volage as the WiPy uses - and needs an external 4K7 pull-up resistor attached to the DHT's serial data-pin (SDA).
+The DHT22 sensor uses a type of onewire protocol to communicate with the outside world. This code example shows how to read values from this sensor using the WiPy 2.0. The DHT22 can be powered with 3V3 - the same voltage as the WiPy uses - and needs an external 4K7 pull-up resistor attached to the DHT's serial data-pin (SDA).
 
 ### Protocol
 After being triggered the DHT22 first acknowledges receipt of the trigger by pulling SDA low for 80 microseconds (μs) and then makes it high for 80 μs. The device then sends back 5 bytes with measurement information. The first two bytes provide the integral and decimal part of the humidity, the next two do the same for the temperature. The last byte acts as a checksum. Bytes are sent bit by bit with the MSB first. Every bit is represented by a 50 μs low followed by a variable length high time. The length of the high time indicates a 0 or a 1, typical values are 26 μs for a 0 and 70 μs for a 1. The DHT22 should be triggered not more often then once every two seconds.
